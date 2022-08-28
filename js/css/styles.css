@@ -34,7 +34,7 @@ input {
 }
 
 #button:hover {
-  curson: pointer;
+  cursor: pointer;
   opacity: .8;
 }
 
