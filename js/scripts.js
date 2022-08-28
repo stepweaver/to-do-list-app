@@ -10,3 +10,25 @@ function newItem() {
     $('#list').append(li);
   }
 }
+
+// Establish crossOut function.
+function crossOut() {
+  li.toggleClass("strike");
+}
+
+// Execute crossOut to the <li> on double click.
+li.on("dblclick", function crossOut() {
+  li.toggleClass("strike");
+});
+
+// Create crossOut button "X".
+let crossOutButton = $('<crossOutButton></crossOutButton>');
+crossOutButton.append(document.createTextNode('X'));
+li.append(crossOutButton);
+
+function deleteListItem() {
+  li.addClass("delete");
+}
+crossOutButton.on("click", deleteListItem);
+
+$('#list').sortable();
